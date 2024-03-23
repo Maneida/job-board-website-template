@@ -36,17 +36,13 @@
       </p>
 
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-      <p>TODO - Show the jobs here</p>
-      <div class="lead">
+      <div>
         {% for job in jobs %}
-          <div>
-            <h4>{{ job['title'] }}</h4>
-            <div><b>Location: </b>{{ job['location'] }}</div>
-          </div>
+          {% include 'jobitem.html' %}
         {% endfor %}
       </div>
       <div class="text-center mt-5">
-        <button type="button" class="btn btn-dark btn-lg">Contact Us</button>
+        <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
         <p class="mt-4">Copyright Maneida, 2024.</p>
       </div>
     </div>

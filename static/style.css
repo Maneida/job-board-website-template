@@ -7,8 +7,11 @@ h4 {
   color: #787878;
   margin-bottom: 4px;
 }
-.btn-dark:hover {
-  background-color: cyan;
-  color: #787878;
-  border-color: rgb(0, 180, 180);
+.applybtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-rounded {
+  border-radius: 2rem;
 }
