@@ -7,6 +7,10 @@
     {% endif %}
   </div>
   <div class="col-3 text-center align-middle applybtn">
-    <button class="btn btn-outline-dark btn-rounded">Apply</button>
+    {% if 'url' in job %}
+    <a href="{{ job['url'] }}"><button class="btn btn-outline-dark btn-rounded">Apply</button></a>
+    {% else %}
+    <a href="https://example.com"><button class="btn btn-outline-dark btn-rounded">Apply</button></a>
+    {% endif %}
   </div>
 </div>

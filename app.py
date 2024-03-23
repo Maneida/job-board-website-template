@@ -33,7 +33,8 @@ JOBS = [
         'id': 5,
         'title': "Miriam Tagoe's TA",
         'location': 'Miotso, Ghana',
-        'salary': 'GHS 1800'
+        'salary': 'GHS 1800',
+        'url': 'https://central.edu.gh/expand/1533'
     },
     {
         'id': 6,
