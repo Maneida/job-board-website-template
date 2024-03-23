@@ -33,8 +33,7 @@ JOBS = [
         'title': "Miriam Tagoe's TA",
         'location': 'Miotso, Ghana',
         'salary': 'GHS 1800'
-    }
-    ,
+    },
     {
         'id': 6,
         'title': "Ekua Thompson's Lab Assistant",
@@ -49,13 +48,16 @@ JOBS = [
     }
 ]
 
+
 @app.route('/', strict_slashes=False)
 def hello_world():
     return render_template("home.html", jobs=JOBS)
 
+
 @app.route('/jobs', strict_slashes=False)
 def list_jobs():
     return jsonify(JOBS)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
