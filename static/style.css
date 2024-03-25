@@ -28,7 +28,7 @@ h4 {
     height: 120px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
   #nav_backfill {
     height: 160px;
   }
