@@ -18,11 +18,18 @@ h4 {
 #nav_backfill {
   height: 80px;
 }
-@media screen and (min-width:560px){
-    #nav_backfill {height: 80px;}
-}@media screen and (max-width:560px){
-    #nav_backfill {height: 120px;}
+@media screen and (min-width: 560px) {
+  #nav_backfill {
+    height: 80px;
+  }
 }
-@media screen and (max-width:400px){
-    #nav_backfill {height: 160px;}
+@media screen and (max-width: 560px) {
+  #nav_backfill {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #nav_backfill {
+    height: 160px;
+  }
 }
