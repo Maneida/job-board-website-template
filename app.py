@@ -31,14 +31,13 @@ JOBS = [
     },
     {
         'id': 5,
-        'title': "Miriam Tagoe's TA",
+        'title': "Teaching Asssistant",
         'location': 'Miotso, Ghana',
-        'salary': 'GHS 1800',
-        'url': 'https://central.edu.gh/expand/1533'
+        'salary': 'GHS 1800'
     },
     {
         'id': 6,
-        'title': "Ekua Thompson's Lab Assistant",
+        'title': "Lab Assistant",
         'location': 'Ho, Ghana',
         'salary': 'GHS 1800'
     },
