@@ -1,5 +1,10 @@
 <div class="pb-2 mb-2 border-bottom row">
-  <div class="col-9">
+  <div class="col-1 d-flex justify-content-center align-items-center">
+    <div class="p-0 p-xl-2 d-none d-sm-block w-100">
+      <img src="https://i.ibb.co/zS3ZKgR/Capture2.jpg" class="img-fluid img-thumbnail" alt="job item pic"/>
+    </div>
+  </div>
+  <div class="col-8">
     <h4>{{ job['title'] }}</h4>
     <div><b>Location: </b>{{ job['location'] }}</div>
     {% if 'salary' in job %}
