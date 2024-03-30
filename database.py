@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 from sqlalchemy import create_engine, text
+import os
+from dotenv import load_dotenv
 
-user = "sql8694807"
-password = "f3MiCPdjdG"
-host = "sql8.freesqldatabase.com"
-dbname = "sql8694807"
+load_dotenv()
+
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST')
+dbname = os.getenv('DB_NAME')
 engine = create_engine(
     f"mysql+mysqlconnector://{user}:{password}@{host}/{dbname}")
 '''engine = create_engine(
