@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ job.title }} - {{ company_name }} Careers</title>
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <div class="container px-lg-5">
+      <h3>Title</h3>
+      <p>{{ job.title }}</p>
+      <h3>Location</h3>
+      <p>{{ job.location }}</p>
+      <h3>Salary</h3>
+      <p>{{ job.currency }} {{ job.salary }}</p>
+      <h3>Responsibilities</h3>
+      <p>{{ job.responsibilities }}</p>
+      <h3>Requirements</h3>
+      <p>{{ job.requirements }}</p>
+      <h3>Application Deadline</h3>
+      <p>{{ job.application_deadline }}</p>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>
+

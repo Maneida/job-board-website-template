@@ -1,7 +1,11 @@
 <div class="pb-2 mb-2 border-bottom row">
   <div class="col-1 d-flex justify-content-center align-items-center">
     <div class="p-0 p-xl-2 d-none d-sm-block w-100">
-      <img src="https://i.ibb.co/zS3ZKgR/Capture2.jpg" class="img-fluid img-thumbnail" alt="job item pic"/>
+      <img
+        src="https://i.ibb.co/zS3ZKgR/Capture2.jpg"
+        class="img-fluid img-thumbnail"
+        alt="job item pic"
+      />
     </div>
   </div>
   <div class="col-8">
@@ -21,9 +25,9 @@
     >
     {% else %}
     <a
-      href="mailto:info@maneida.online?subject=Application%20for%20{{job['title']}}%20Position&body=Name%3A%20%3Cname%20here%3E%0D%0A%0D%0AResume%20link%3A%20%3Cresume%20link%20here%3E%0D%0A%0D%0ALinkedIn%20link%3A%20%3CLinkedIn%20link%20here%3E"
       type="button"
       class="btn btn-outline-dark rounded-pill"
+      href="/job/{{ job['id'] }}"
       >Apply</a
     >
     {% endif %}
