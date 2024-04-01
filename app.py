@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_world():
+def index():
     jobs = load_jobs_from_db()
     return render_template("home.html", jobs=jobs, company_name='Jovian',
                            year=datetime.now().year)
