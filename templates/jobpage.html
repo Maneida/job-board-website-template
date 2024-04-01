@@ -9,14 +9,16 @@
   <body>
     {% include 'nav.html' %}
     <div class="container px-lg-5">
+      <img
+        class="img-fluid rounded object-fit-cover banner"
+        src="{{url_for('static', filename='job_banner.jpg')}}"
+        alt="banner pic"
+      />
       <h1 class="text-center mt-4 mb-4">{{company_name}} Careers</h1>
-      <h3>Title</h3>
-      <p>{{ job.title }}</p>
-      <h3>Location</h3>
+      <h3>{{ job.title }}</h3>
+      <h4>Location</h4>
       <p>{{ job.location }}</p>
-      <h3>Salary</h3>
-      <p>{{ job.currency }} {{ job.salary }}</p>
-      <h3>Responsibilities</h3>
+      <h4>Responsibilities</h4>
       <ul>
         {% for sentence in job.responsibilities.split('\n') %}
           {% if sentence %}
@@ -24,7 +26,7 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <h3>Requirements</h3>
+      <h4>Requirements</h4>
       <ul>
         {% for sentence in job.requirements.split('\n') %}
           {% if sentence %}
@@ -32,10 +34,11 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <h3>Application Deadline</h3>
+      <h4>Salary</h4>
+      <p>{{ job.currency }} {{ job.salary }}</p>
+      <h4>Application Deadline</h4>
       <p>{{ job.application_deadline }}</p>
     </div>
     {% include 'footer.html' %}
   </body>
 </html>
-
