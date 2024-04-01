@@ -17,9 +17,21 @@
       <h3>Salary</h3>
       <p>{{ job.currency }} {{ job.salary }}</p>
       <h3>Responsibilities</h3>
-      <p>{{ job.responsibilities }}</p>
+      <ul>
+        {% for sentence in job.responsibilities.split('\n') %}
+          {% if sentence %}
+            <li>{{ sentence.strip() }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
       <h3>Requirements</h3>
-      <p>{{ job.requirements }}</p>
+      <ul>
+        {% for sentence in job.requirements.split('\n') %}
+          {% if sentence %}
+            <li>{{ sentence.strip() }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
       <h3>Application Deadline</h3>
       <p>{{ job.application_deadline }}</p>
     </div>
