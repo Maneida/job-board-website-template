@@ -9,7 +9,7 @@ year = datetime.now().year
 
 
 @app.route('/', strict_slashes=False)
-def hello_world():
+def index():
     jobs = load_jobs_from_db()
     return render_template("home.html", jobs=jobs, company_name='Jovian',
                            year=year)
