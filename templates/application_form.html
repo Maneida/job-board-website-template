@@ -1,0 +1,29 @@
+<div class="container px-lg-5 border-top border-3 py-4">
+  <form action="/job/{{ job.id }}" method="post">
+    <p>
+      <label for="full_name">Full Name</label><br>
+      <input type="text" required name="full_name" placeholder="Efia Gyasi" />
+    </p>
+    <p>
+      <label for="email">Email</label><br>
+      <input type="email" required name="email" placeholder="efiagyasi@example.com" />
+    </p>
+    <p>
+      <label for="linkedin_url">LinkedIn URL</label><br>
+      <input type="url" name="linkedin_url" placeholder="https://linked.com/in/efiagyasi">
+    </p>
+    <p>
+      <label for="education">Education</label><br>
+      <textarea name="education" cols="50" rows="5" placeholder="Add education details."></textarea>
+    </p>
+    <p>
+      <label for="work_experience">Work Experience</label><br>
+      <textarea name="work_experience" cols="50" rows="5" placeholder="Add work experience."></textarea>
+    </p>
+    <p>
+      <label for="resume_url">Resume URL</label><br>
+      <input type="url" name="resume_url" placeholder="https://resume.com/efiagyasi">
+    </p>
+    <input type="submit" value="Submit">
+  </form>
+</div>
