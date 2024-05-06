@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, text
 import os
 from dotenv import load_dotenv
 from sqlalchemy.exc import SQLAlchemyError
+import time
 
 load_dotenv()
 
@@ -16,6 +17,23 @@ engine = create_engine(
     f"mysql+pymysql://{user}:{password}@{host}/{dbname}")'''
 
 
+def retry_fetch(func):
+    def wrapper(*args, **kwargs):
+        retries = 3
+        while retries > 0:
+            try:
+                return func(*args, **kwargs)
+            except SQLAlchemyError as e:
+                print(f"Error: {e}. Retrying...")
+                retries -= 1
+                if retries == 0:
+                    print("Max retries exceeded. Giving up.")
+                    return None
+                time.sleep(1)  # Wait for 1 second before retrying
+    return wrapper
+
+
+@retry_fetch
 def load_jobs_from_db():
     with engine.connect() as conn:
         result = conn.execute(text("SELECT * FROM jobs"))
@@ -28,6 +46,7 @@ def load_jobs_from_db():
         return jobs
 
 
+@retry_fetch
 def load_job_from_db(id):
     with engine.connect() as conn:
         result = conn.execute(
